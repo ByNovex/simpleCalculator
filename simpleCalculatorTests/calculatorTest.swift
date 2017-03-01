@@ -24,9 +24,5 @@ class calculatorTest: XCTestCase {
     }
     
     
-    func testGetNumberFromButton() {
-        calculator.numberIsPressed(num: .one)
-        XCTAssertEqual(calculator.number, 1)
-    }
     
 }

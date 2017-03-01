@@ -12,7 +12,21 @@ class ViewController: UIViewController {
 
     @IBOutlet var constraintRightStackView: NSLayoutConstraint!
     @IBOutlet var constraintLeftStackView: NSLayoutConstraint!
-    @IBOutlet weak var LabelResult: UILabel!
+    @IBOutlet var LabelResult: UILabel!
+    
+    var calculator:Calculator!
+    
+    var currentNumber:Float! {
+        didSet {
+            changeNumLabel(num: currentNumber)
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        calculator = Calculator()
+        currentNumber = 0
+    }
     
     @IBAction func clearPressed(_ sender: UIButton) {
         
@@ -23,28 +37,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func numberPressed(_ sender: UIButton) {
-        
+        currentNumber = calculator.getNumber(num: sender.tag)
     }
 
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    func changeNumLabel(num:Float) {
+        let aux = checkCurrentNum()
+        LabelResult.text = aux
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func checkCurrentNum() -> String{
+        let aux = currentNumber.truncatingRemainder(dividingBy: 1)
+        if aux != 0 {
+            let aux = String(aux).components(separatedBy: ".")
+            return "\(Int(currentNumber)),\(aux[1])"
+        }
+        else {
+            return "\(Int(currentNumber))"
+        }
     }
     
     override func viewWillLayoutSubviews() {
         //Justo antes de volver a dibujar los layouts
         checkOrientation(orientation: UIDevice.current.orientation)
     }
-    
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//        checkOrientation(orientation: UIDevice.current.orientation)
-//    }
     
     func checkOrientation(orientation: UIDeviceOrientation) {
         
