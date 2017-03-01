@@ -14,6 +14,9 @@
 		5046DF6B1E643B8B001323DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5046DF691E643B8B001323DD /* LaunchScreen.storyboard */; };
 		5046DF761E643B8B001323DD /* simpleCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046DF751E643B8B001323DD /* simpleCalculatorTests.swift */; };
 		5046DF811E643B8B001323DD /* simpleCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046DF801E643B8B001323DD /* simpleCalculatorUITests.swift */; };
+		5046DF8F1E649B02001323DD /* brainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046DF8E1E649B02001323DD /* brainTests.swift */; };
+		5046DF911E649B8A001323DD /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046DF901E649B8A001323DD /* Brain.swift */; };
+		5057C1991E66EBB300C9017B /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5057C1981E66EBB300C9017B /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		5046DF7C1E643B8B001323DD /* simpleCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5046DF801E643B8B001323DD /* simpleCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleCalculatorUITests.swift; sourceTree = "<group>"; };
 		5046DF821E643B8B001323DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5046DF8E1E649B02001323DD /* brainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = brainTests.swift; sourceTree = "<group>"; };
+		5046DF901E649B8A001323DD /* Brain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		5057C1981E66EBB300C9017B /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,8 @@
 				5046DF671E643B8B001323DD /* Assets.xcassets */,
 				5046DF691E643B8B001323DD /* LaunchScreen.storyboard */,
 				5046DF6C1E643B8B001323DD /* Info.plist */,
+				5046DF901E649B8A001323DD /* Brain.swift */,
+				5057C1981E66EBB300C9017B /* Calculator.swift */,
 			);
 			path = simpleCalculator;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			children = (
 				5046DF751E643B8B001323DD /* simpleCalculatorTests.swift */,
 				5046DF771E643B8B001323DD /* Info.plist */,
+				5046DF8E1E649B02001323DD /* brainTests.swift */,
 			);
 			path = simpleCalculatorTests;
 			sourceTree = "<group>";
@@ -263,6 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5046DF631E643B8B001323DD /* ViewController.swift in Sources */,
+				5057C1991E66EBB300C9017B /* Calculator.swift in Sources */,
+				5046DF911E649B8A001323DD /* Brain.swift in Sources */,
 				5046DF611E643B8B001323DD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5046DF8F1E649B02001323DD /* brainTests.swift in Sources */,
 				5046DF761E643B8B001323DD /* simpleCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +526,7 @@
 				5046DF871E643B8B001323DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5046DF881E643B8B001323DD /* Build configuration list for PBXNativeTarget "simpleCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +535,7 @@
 				5046DF8A1E643B8B001323DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5046DF8B1E643B8B001323DD /* Build configuration list for PBXNativeTarget "simpleCalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +544,7 @@
 				5046DF8D1E643B8B001323DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
