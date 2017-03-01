@@ -14,8 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet var constraintLeftStackView: NSLayoutConstraint!
     @IBOutlet weak var LabelResult: UILabel!
     
+    @IBAction func clearPressed(_ sender: UIButton) {
+        
+    }
     
+    @IBAction func operationPressed(_ sender: UIButton) {
+        
+    }
     
+    @IBAction func numberPressed(_ sender: UIButton) {
+        
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +52,8 @@ class ViewController: UIViewController {
 
             constraintLeftStackView.isActive = false
             constraintRightStackView.isActive = true
-
-            
+   
         } else {
-
 
             constraintLeftStackView.isActive = true
             constraintRightStackView.isActive = false

@@ -9,13 +9,24 @@
 import Foundation
 
 class Calculator {
-    var number1:Float
-    var number2:Float
+    var number:Float
+    var numberCalculate:Float
     
     init() {
-        number1 = 0
-        number2 = 0
+        number = 0
+        numberCalculate = 0
     }
+    
+    func numberIsPressed(num: Number){
+        if (num != .decimal){
+            number = Float(num.hashValue)
+        }
+        else {
+            //es el punto de decimal.
+        }
+    }
+    
+    
     
     
 
