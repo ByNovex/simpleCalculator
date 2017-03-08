@@ -8,15 +8,15 @@
 
 import Foundation
 
-enum Operation {
-    case ac
-    case inverse
-    case hundredPercent
-    case divide
-    case multiply
-    case substration
-    case sum
-    case equal
+enum Operation: Int{
+    case ac = 0
+    case inverse = 1
+    case hundredPercent = 2
+    case divide = 3
+    case multiply = 4
+    case substration =  5
+    case sum = 6
+    case equal = 7
 }
 
 enum Number {

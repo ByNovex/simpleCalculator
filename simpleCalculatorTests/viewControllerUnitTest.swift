@@ -38,5 +38,8 @@ class viewControllerUnitTest: XCTestCase {
         XCTAssertEqual(viewController!.LabelResult.text!, "1,23")
     }
     
+    func testOperationPressed() {
+        
+    }
     
 }

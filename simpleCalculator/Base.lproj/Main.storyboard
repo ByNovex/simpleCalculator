@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -461,6 +462,7 @@
                             <constraint firstItem="694-Ku-0fK" firstAttribute="leading" secondItem="AzD-yN-4Da" secondAttribute="trailing" constant="1" id="huQ-tX-GVr"/>
                             <constraint firstAttribute="trailing" secondItem="694-Ku-0fK" secondAttribute="trailing" id="mw6-KI-c7M"/>
                             <constraint firstItem="PH4-Q2-1md" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pVn-g0-1PF"/>
+                            <constraint firstItem="hE8-hW-cpp" firstAttribute="width" secondItem="Abi-zx-D2b" secondAttribute="height" multiplier="1:1" id="qpk-Fv-icO"/>
                             <constraint firstItem="PH4-Q2-1md" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tQF-P2-5lI"/>
                         </constraints>
                     </view>

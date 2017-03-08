@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     var currentNumber:Float! {
         didSet {
-            changeNumLabel(num: currentNumber)
+            changeNumberLabel()
         }
     }
     
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func operationPressed(_ sender: UIButton) {
-        
+        calculator.operationIsPressed(op: Operation(rawValue: sender.tag)!)
     }
     
     @IBAction func numberPressed(_ sender: UIButton) {
@@ -41,24 +41,40 @@ class ViewController: UIViewController {
     }
 
     
-    func changeNumLabel(num:Float) {
-        let aux = checkCurrentNum()
-        LabelResult.text = aux
+    func changeNumberLabel() {
+        LabelResult.text = currentNumberToString()
     }
     
-    func checkCurrentNum() -> String{
-        let aux = currentNumber.truncatingRemainder(dividingBy: 1)
-        if aux != 0 {
-            let aux = String(aux).components(separatedBy: ".")
-            return "\(Int(currentNumber)),\(aux[1])"
+    func currentNumberToString() -> String{
+        return transformationToString()
+    }
+    
+    func transformationToString() -> String{
+        let number = Int(currentNumber)
+        if currentNumberIsDecimal() {
+            let decimal = getStringDecimal()
+            return "\(number),\(decimal)"
         }
         else {
-            return "\(Int(currentNumber))"
+            return "\(number)"
         }
+    }
+    
+    func getStringDecimal() -> String {
+        let arrayDecimalSeparatedByDot = String(getDecimalFromCurrentNumber()).components(separatedBy: ".")
+        return arrayDecimalSeparatedByDot[1]
+    }
+    
+    func currentNumberIsDecimal() -> Bool {
+        return getDecimalFromCurrentNumber() != 0
+    }
+    
+    func getDecimalFromCurrentNumber() -> Float {
+        return currentNumber.truncatingRemainder(dividingBy: 1)
     }
     
     override func viewWillLayoutSubviews() {
-        //Justo antes de volver a dibujar los layouts
+        //Este metodo se llama justo antes de volver a dibujar los layouts
         checkOrientation(orientation: UIDevice.current.orientation)
     }
     

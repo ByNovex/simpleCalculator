@@ -58,7 +58,6 @@ class Calculator {
     
     func inverseOP() {
         
-    
     }
     
     func divideOP() {
@@ -84,6 +83,8 @@ class Calculator {
     func equalOP() {
         
     }
+    
+    
     
     
 
